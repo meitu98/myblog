@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Hugo Theme Dream</title>
+    <link>http://localhost:1313/posts/</link>
+    <description>Recent content in Posts on Hugo Theme Dream</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 11 Apr 2025 00:55:35 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo 博客搭建入门指南</title>
+      <link>http://localhost:1313/posts/test11/</link>
+      <pubDate>Fri, 11 Apr 2025 00:55:35 +0800</pubDate>
+      <guid>http://localhost:1313/posts/test11/</guid>
+      <description>&lt;h2 id=&#34;一hugo-是什么&#34;&gt;一、Hugo 是什么？&lt;/h2&gt;&#xA;&lt;p&gt;Hugo 是一个基于 Go 语言开发的&lt;strong&gt;静态网站生成器&lt;/strong&gt;，具有以下特点：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;⚡ &lt;strong&gt;极速构建&lt;/strong&gt;：生成速度可达每秒数百页&lt;/li&gt;&#xA;&lt;li&gt;📦 &lt;strong&gt;极简依赖&lt;/strong&gt;：仅需 Go 环境即可运行&lt;/li&gt;&#xA;&lt;li&gt;🎨 &lt;strong&gt;主题丰富&lt;/strong&gt;：支持 5000+ 社区主题&lt;/li&gt;&#xA;&lt;li&gt;🔄 &lt;strong&gt;热更新&lt;/strong&gt;：开发时实时预览&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://gohugo.io/images/logo.png&#34; alt=&#34;Hugo Logo&#34;&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;二环境准备&#34;&gt;二、环境准备&lt;/h2&gt;&#xA;&lt;h3 id=&#34;1-安装-hugo&#34;&gt;1. 安装 Hugo&lt;/h3&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Windows 使用 Scoop&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;scoop install hugo-extended&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# macOS 使用 Homebrew&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;brew install hugo&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;2-验证安装&#34;&gt;2. 验证安装&lt;/h3&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;hugo version  &lt;span style=&#34;color:#75715e&#34;&gt;# 应显示类似 hugo v0.145.0&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;三创建首个站点&#34;&gt;三、创建首个站点&lt;/h2&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;hugo new site my-blog  &lt;span style=&#34;color:#75715e&#34;&gt;# 创建名为 my-blog 的站点&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cd my-blog&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git init  &lt;span style=&#34;color:#75715e&#34;&gt;# 初始化 Git 仓库&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;四主题配置&#34;&gt;四、主题配置&lt;/h2&gt;&#xA;&lt;h3 id=&#34;1-安装主题以-even-为例&#34;&gt;1. 安装主题（以 Even 为例）&lt;/h3&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git clone https://github.com/olOwOlo/hugo-theme-even themes/even&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;2-修改配置文件&#34;&gt;2. 修改配置文件&lt;/h3&gt;&#xA;&lt;p&gt;&lt;code&gt;config.toml&lt;/code&gt; 关键配置：&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Test1</title>
+      <link>http://localhost:1313/posts/test1/</link>
+      <pubDate>Fri, 11 Apr 2025 00:52:22 +0800</pubDate>
+      <guid>http://localhost:1313/posts/test1/</guid>
+      <description>&lt;p&gt;Cut out summary from your post content here.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
